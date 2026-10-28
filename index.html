@@ -245,7 +245,67 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid 
   #s-start h1{font-size:clamp(44px,min(6.4vw,11vh),96px);margin-top:8px}
   #s-start .lead{margin:12px 0 16px}
 }
+/* laptops: landscape screens under 860px tall get a compact layout so each screen fits without scrolling */
+@media (min-width:901px) and (max-height:860px){
+  .app{padding-block:8px;gap:8px}
+  .brand img{height:32px}
+  .pill,.who-pill{padding:4px 10px;font-size:11px}
+  .screen{gap:10px}
+  .head h2{font-size:clamp(28px,min(4.4vw,7vh),56px)}
+  .head p{font-size:14.5px;margin-top:4px}
+  .btn{font-size:clamp(16px,2.6vh,21px);min-height:44px;padding:9px 20px}
+  .btn.small{font-size:15px;min-height:38px;padding:7px 14px}
+  .role .art svg{max-height:max(160px,min(calc(100vh - 390px),380px))}
+  .role b{font-size:24px;padding:10px 14px 2px}
+  .role span{font-size:13.5px;padding:0 14px 10px}
+  .fields input{min-height:42px;padding:8px 12px;font-size:16px}
+  .cov{min-height:0;padding:12px;gap:4px}
+  .cov svg{width:36px;height:36px}
+  .story-card .art svg{max-height:22vh}
+  .story-card b{font-size:24px;padding:10px 14px 2px}
+  .story-card span{font-size:13.5px;padding:0 14px 10px}
+  .stories{gap:12px}
+  .steps span{padding:4px 9px;font-size:10.5px}
+  .play{gap:18px}
+  .vis .art{display:flex;justify-content:center}
+  .vis .art svg{max-height:calc(100vh - 140px);width:auto;max-width:100%}
+  .nar{gap:8px}
+  .nar h2{font-size:clamp(26px,min(3.6vw,6.6vh),50px)}
+  .nar p{font-size:clamp(14.5px,2.4vh,18px);line-height:1.4}
+  .fb{font-size:14.5px;padding:9px 12px;line-height:1.38}
+  .lesson{padding:10px 14px;gap:4px}
+  .lesson h3{font-size:20px}
+  .lesson p{font-size:14px!important;line-height:1.38!important}
+  .caption{font-size:13.5px;line-height:1.4}
+  .caption .grid>div{padding:7px 10px}
+  .doc{padding:14px 16px}
+  .ledger .row{padding:6px 0;font-size:15px}
+  .pay{gap:8px}
+  .payhead h2{font-size:clamp(28px,min(4vw,6.6vh),56px)}
+  .payhead .tot b{font-size:clamp(28px,min(3.8vw,6.6vh),54px)}
+  .cmp{gap:12px}
+  .out{padding:9px 14px;gap:5px;border-top-width:6px}
+  .out h3{font-size:16px}
+  .out .big{font-size:clamp(32px,min(4.6vw,7.6vh),66px)}
+  .bar{height:20px}
+  .keys{font-size:13px;gap:3px}
+  .out .note{font-size:13px;line-height:1.35}
+  .extras{gap:12px}
+  .ex{padding:9px 12px;font-size:13px;line-height:1.36;gap:3px}
+  .ex b.t{font-size:15.5px}
+  .ex cite{font-size:11px}
+  .form{padding:14px;gap:8px}
+  .form h3{font-size:26px}
+}
+@media (min-width:901px) and (max-height:700px){
+  .vis .art svg{max-height:calc(100vh - 120px)}
+  .stamp-o{font-size:11px;padding:4px 8px}
+  .nar p{font-size:14.5px}
+  .tag{padding:4px 9px;font-size:10.5px}
+  .pay{gap:6px} .ex{font-size:12.5px;padding:8px 11px} .out{gap:4px}
+}
 @media (max-width:1100px){ .covs{grid-template-columns:repeat(3,minmax(0,1fr))} .extras{grid-template-columns:minmax(0,1fr)} }
+@media (min-width:901px) and (max-width:1100px) and (max-height:860px){ .covs{grid-template-columns:repeat(5,minmax(0,1fr))} .extras{grid-template-columns:repeat(3,minmax(0,1fr))} .cov span{font-size:12.5px} }
 @media (max-width:900px){
   body{overflow:auto} .app{height:auto;min-height:100%}
   #s-start,.roles,.play,.cmp,.leadwrap{grid-template-columns:minmax(0,1fr)}
